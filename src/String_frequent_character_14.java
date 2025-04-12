@@ -3,7 +3,8 @@ public class String_frequent_character_14 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the string: ");
-        String str = sc.nextLine();
+        String str1 = sc.nextLine();
+        String str = str1.toLowerCase();
         char [] arr1 = str.toCharArray();
         char ch = '\0';
         int count = 0;
