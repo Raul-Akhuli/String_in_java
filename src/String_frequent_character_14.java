@@ -4,19 +4,21 @@ public class String_frequent_character_14 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the string: ");
         String str = sc.nextLine();
-        System.out.println("Enter the character to check frequency: ");
-        char ch = sc.next().charAt(0);
+        char [] arr1 = str.toCharArray();
+        char ch = '\0';
         int count = 0;
-        char[] arr1 = str.toCharArray();
-        for (int i = 0; i < str.length(); i++) {
-            if (ch == arr1[i]) {
-                count++;
+        int count1 = 0;
+        for(int i = 0; i < str.length(); i++){
+            for(int j = 0; j < str.length(); j++){
+                if(arr1[i] == arr1[j]){
+                    count1++;
+                }
+            }
+            if(count1 > count) {
+                count = count1;
+                ch = arr1[i];
             }
         }
-        if (count != 0) {
-            System.out.println("Frequency of a character is: " + count);
-        } else {
-            System.out.println("No character found ");
-        }
+        System.out.println("Most frequent character is: " + ch);
     }
 }
