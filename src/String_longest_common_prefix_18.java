@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class String_longest_common_prefix_18 {
